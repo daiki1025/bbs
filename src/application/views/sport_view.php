@@ -10,19 +10,19 @@
   <div>
     <a href="login_view.php">
       <div style="position:absolute;top:300px;left:300px;">
-        <img src="img/music1.jpg"width="370" height="220" >
+        <img src="img/sport1.jpg"width="370" height="220" >
       </a>
     </div>
   <div>
     <a href="login_view.php">
       <div style="position:absolute;top:300px;left:800px;">
-    <img src="img/music2.jpg"width="370" height="220" >
-  </a>
-</div>
+        <img src="img/sport2.jpg"width="370" height="220" >
+      </a>
+    </div>
   <div>
     <a href="login_view.php">
       <div style="position:absolute;top:300px;left:1300px;">
-        <img src="img/music3.jpg"width="370" height="220" >
+        <img src="img/sport3.jpg"width="370" height="220" >
       </a>
     </div>
   <a href="top">
