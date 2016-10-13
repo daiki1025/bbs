@@ -18,13 +18,36 @@ class Login extends CI_Controller {
 		{
 			$this->load->view('top_view');
 		}
-		else
+	  else
 		{
 			echo 'FAILED';
 		}
+
+   include "top.php";
+
+
+
+
     //$this->load->view('top_view');
 
 
 	}
+	public function music_view()
+	{
+		$this->load->view('music_view');
+	}
+	public function sport_view()
+	{
+		$this->load->view('sport_view');
+	}
+	public function game_view()
+	{
+		$this->load->view('game_view');
+	}
+	public function back()
+	{
+		$this->load->view('top_view');
+	}
+
 
 }

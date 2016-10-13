@@ -7,4 +7,8 @@ class Signup extends CI_Controller {
 	{
 		$this->load->view('account_view');
 	}
+	public function login()
+	{
+		$this->load->view('login');
+	}
 }

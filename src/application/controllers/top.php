@@ -7,4 +7,8 @@ class top extends CI_Controller {
 	{
 		$this->load->view('top_view');
 	}
+	public function move()
+	{
+		$this->load->view('music_view');
+	}
 }
