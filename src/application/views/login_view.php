@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <title>kadai</title>
 <from method="post" action="login/check">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="<?php echo base_url().'style.css'; ?>">
 
 </style>
 </head>
@@ -28,12 +28,12 @@
   </div>
 <div style="position:absolute;top:600px;left:800px;">
   <button type="submit"name="loginbutton">
-    <img src="img/login.jpg" width="300" height="60" alt="">
+    <img src="<?php echo base_url().'img/login.jpg'; ?>" width="300" height="60" alt="">
   </button>
 </div>
   <a href="signup">
     <div style="position:absolute;top:700px;left:1300px;">
-      <img src="img/account.jpg" width="250" height="60" alt="">
+      <img src="<?php echo base_url().'img/account.jpg'; ?>" width="250" height="60" alt="">
     </div>
   </a>
 </form>

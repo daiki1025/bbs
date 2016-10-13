@@ -16,7 +16,7 @@
       <h2>パスワード</h2>
     </div>
   </font>
-  <form action="login/check1" method="post">
+  <form action="login/touroku" method="post">
     <div style="position:absolute;top:300px;left:750px;">
     <input type="text"name="id1"style="width:400px;height:50px;">
   </div>
@@ -28,7 +28,7 @@
       <img src="img/touroku.jpg" width="300" height="60" alt="">
     </button>
   </div>
-    <a href="login/check">
+    <a href="login">
       <div style="position:absolute;top:700px;left:1300px;">
         <img src="img/back.jpg" width="250" height="60" alt="">
       </a>
