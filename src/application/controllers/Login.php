@@ -16,7 +16,8 @@ class Login extends CI_Controller {
 		$this->user->initialize($user_id);
 		if($this->user->correct_password($password))
 		{
-			$this->load->view('top_view');
+			$this->user->login();
+			redirect(base_url().'home/'.$user_id);
 		}
 	  else
 		{
@@ -48,6 +49,5 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('top_view');
 	}
-
 
 }

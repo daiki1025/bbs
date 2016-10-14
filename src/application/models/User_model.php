@@ -12,6 +12,9 @@ class User_model extends CI_Model
   {
     parent::__construct();
     $this->load->database();
+    $CI = & get_instance();
+    $CI->load->library('session');
+    $this->session = $CI->session;
   }
 
   public function initialize($user_id)
@@ -42,18 +45,40 @@ class User_model extends CI_Model
 
   public function save()
   {
-    $name=$this->session->userdata('name');
-    $pass=$this->session->userdata('pass');
+    $name=$this->session->userdata('id1');
+    $pass=$this->session->userdata('pass1');
 
-    $data = array(
-        'id' => 'id',
-        'name' => 'name',
-        'pass' => 'pass'
-);
+    $data = [
+        'id' => 'id1',
+        'name' => 'id1',
+        'pass' => 'pass1'
+      ];
 
-$this->db->insert('user', $data);
-
-    //$this->load->database();
-
+     $this->db->insert('user', $data);
   }
+
+  // public function index()
+  //  {
+  //    if($this->input->post('id1') !=null)
+  //    {
+  //      $data=array('data'=>$this->input->post('data',true),
+  //      'id1'=>$this=>$this->input->post('id1',true),
+  //      'content'=>$this->input->post(''))
+  //    }
+  //  }
+
+   public function login()
+   {
+     $this->session->set_userdata(['user_id' => $this->_user_id]);
+   }
+
+   public function is_logged_in()
+   {
+     return $this->session->userdata('user_id') !== NULL;
+   }
+
+   public function logout()
+   {
+     $this->session->unset_userdata('user_id');
+   }
 }

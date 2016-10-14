@@ -10,7 +10,7 @@
 <body bgcolor="#FF9933">
   <font size="5" color="#FFFFFF">
     <div name="namae"style="position:absolute;top:220px;left:850px;">
-      <h2>ユーザー名</h2>
+      <h2>アカウント名</h2>
     </div>
   </font>
   <font size="5" color="#FFFFFF">
@@ -24,7 +24,7 @@
  </div>
  <br />
   <div style="position:absolute;top:450px;left:750px;">
-    <input type="text" name="pass" style="width:400px;height:50px;">
+    <input type="password" name="pass" style="width:400px;height:50px;">
   </div>
 <div style="position:absolute;top:600px;left:800px;">
   <button type="submit"name="loginbutton">
