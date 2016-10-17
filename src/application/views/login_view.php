@@ -1,15 +1,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>kadai</title>
+<title>keizi</title>
 <from method="post" action="login/check">
-<link rel="stylesheet" href="<?php echo base_url().'style.css'; ?>">
+  <link href="<?php echo base_url().'css/style.css'; ?>" rel="stylesheet" type="text/css">
+
 
 </style>
 </head>
 <body bgcolor="#FF9933">
   <font size="5" color="#FFFFFF">
-    <div name="namae"style="position:absolute;top:220px;left:850px;">
+    <div name="name"style="position:absolute;top:220px;left:850px;">
       <h2>アカウント名</h2>
     </div>
   </font>
