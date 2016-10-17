@@ -9,14 +9,17 @@ class Home extends MY_Controller
     parent::__construct();
   }
 
+  public function index()
+  {
+    $this->load->view('top_view');
+  }
+
   public function main($user_id)
   {
     parent::login_check($user_id);
     $data = ['user_id' => $user_id];
     $this->load->view('top_view', $data);
   }
-  public function music()
-  {
-    $this->load->view('music_view');
-  }
+
+
 }

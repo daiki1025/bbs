@@ -12,12 +12,18 @@ class Login extends CI_Controller {
 
 		$user_id = $this->input->post('id');
 		$password = $this->input->post('pass');
+		$name = $this->input->post('name');
 		$this->load->model('User_model', 'user');
 		$this->user->initialize($user_id);
 		if($this->user->correct_password($password))
 		{
 			$this->user->login();
 			redirect(base_url().'home/'.$user_id);
+			$password = "pass";
+			$hash1=hash('sha256', $password);
+			echo 'sha256:'.$hash1.'<br>';
+			
+
 		}
 	  else
 		{
