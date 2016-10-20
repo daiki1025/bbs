@@ -19,15 +19,11 @@ class Login extends CI_Controller {
 		{
 			$this->user->login();
 			redirect(base_url().'home/'.$user_id);
-			$password = "pass";
-			$hash1=hash('sha256', $password);
-			echo 'sha256:'.$hash1.'<br>';
-			
 
 		}
 	  else
 		{
-			echo 'FAILED';
+			echo 'ログインに失敗しました。';
 		}
 
    include "top.php";

@@ -81,4 +81,15 @@ class User_model extends CI_Model
    {
      $this->session->unset_userdata('user_id');
    }
+
+   public function name()
+   {
+     //DBからとってくる
+     $this->db->select('name');
+     $this->db->from('user');
+
+     $value = $this->db->get()->result_array();
+
+     return $value;
+   }
 }

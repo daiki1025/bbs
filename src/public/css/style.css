@@ -1,6 +1,20 @@
 
 @charset "utf-8";
 
+a{color:#FFFFFF;
+  font-size: 18px;}
+
+  .btn {
+    background: #EEE;
+    color: #111;
+    -moz-box-shadow: 0px 0px 2px rgba(000,000,000,0.3),inset 1px 1px 5px rgba(000,153,204,1),inset -1px -1px 5px rgba(205,0,0,1);
+    -webkit-box-shadow: 0px 0px 2px rgba(000,000,000,0.3),inset 1px 1px 5px rgba(000,153,204,1),inset -1px -1px 5px rgba(205,0,0,1);
+    width: 100px;
+    padding: 10px 0;
+}
+
+
+
 
 
 h1 {
@@ -83,3 +97,8 @@ h1 {
          overflow: visible;
         height: 38px;
   }
+  html,  body { margin: 0; width: 100%; height: 100%; }
+  .container { position: relative; width: 100%; height: auto !important; height: 100%; min-height: 100%; }
+
+  main { padding-top: 60px; height: 200px; background-color: #fff000; }
+  footer { width: 100%; height: 60px; background-color: #000000; position: absolute; bottom: 0; }

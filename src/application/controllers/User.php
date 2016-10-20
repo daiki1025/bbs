@@ -17,6 +17,8 @@ class User extends CI_Controller
         'name'=>$this->input->post('name',true),
       'pass'=>$this->input->post('pass',true));
       $this->db->insert('user',$data);
+string password_hash ( string $password , integer $algo [, array $options ] )
+
       $this->load->view('login_view');
       redirect(base_url().'login');
     }

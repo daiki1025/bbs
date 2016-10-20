@@ -9,7 +9,16 @@
 </head>
 <body bgcolor="#FF9933">
   <header>
-<h1>趣味掲示板へようこそ</h1>
+<h1>趣味掲示板へようこそ<br>
+ <a href="<?php echo base_url().'music/japan'; ?>">邦楽</a>
+ <a href="<?php echo base_url().'music/foreign'; ?>">洋楽</a>
+ <a href="<?php echo base_url().'music/rock'; ?>">ロック</a>
+ <a href="<?php echo base_url().'sport/soccer'; ?>">サッカー</a>
+ <a href="<?php echo base_url().'sport/baseball'; ?>">野球</a>
+ <a href="<?php echo base_url().'sport/basketball'; ?>">バスケットボール</a>
+ <a href="<?php echo base_url().'game/fps'; ?>">fps</a>
+ <a href="<?php echo base_url().'game/puzzle'; ?>">パズル</a>
+ <a href="<?php echo base_url().'game/race'; ?>">レース</a></h2>
 </header>
   <form method="post" action="login/view">
     <a href="<?php echo base_url().'category/music'; ?>">
@@ -43,7 +52,7 @@
                  <li><a href="<?php echo base_url().'Sport/baseball'; ?>">野球</a></li>
                  <li><a href="<?php echo base_url().'Sport/basketball'; ?>">バスケットボール</a></li>
                  <li><a href="<?php echo base_url().'Game/fps'; ?>">FPS</a></li>
-                 <li><a href="<?php echo base_url().'Game/pszzule'; ?>">パズル</a></li>
+                 <li><a href="<?php echo base_url().'Game/puzzle'; ?>">パズル</a></li>
                  <li><a href="<?php echo base_url().'Game/race'; ?>">レース</a></li>
             </ul>
          </li>
