@@ -10,6 +10,7 @@
 <body bgcolor="#FF9933">
   <header>
 <h1>趣味掲示板へようこそ<br>
+
  <a href="<?php echo base_url().'music/japan'; ?>">邦楽</a>
  <a href="<?php echo base_url().'music/foreign'; ?>">洋楽</a>
  <a href="<?php echo base_url().'music/rock'; ?>">ロック</a>
@@ -58,5 +59,6 @@
          </li>
        </div>
      </div>
+
    </body>
    </html>

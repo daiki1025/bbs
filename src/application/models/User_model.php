@@ -17,16 +17,19 @@ class User_model extends CI_Model
     $this->session = $CI->session;
   }
 
-  public function initialize($user_id)
+  public function initialize($user_id,$password)
   {
     $this->db->select('
       id
       , name
       , pass
     ');
+    $hash_pass = md5($password);
+
     $this->db->from('user');
-    $this->db->where('id', $user_id);
+    $this->db->where('pass', $hash_pass);
     $result = $this->db->get()->result_array();
+    //user_idがとれればログイン
     if(count($result) !== 1)
     {
       // TODO FALSE 返却でよいかどうかは要検討
@@ -36,6 +39,8 @@ class User_model extends CI_Model
     $this->_user_id = $user['id'];
     $this->_name = $user['name'];
     $this->_password = $user['pass'];
+
+    return $this->_password;
   }
 
   public function correct_password($password)
@@ -82,14 +87,5 @@ class User_model extends CI_Model
      $this->session->unset_userdata('user_id');
    }
 
-   public function name()
-   {
-     //DBからとってくる
-     $this->db->select('name');
-     $this->db->from('user');
 
-     $value = $this->db->get()->result_array();
-
-     return $value;
-   }
 }

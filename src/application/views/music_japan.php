@@ -9,7 +9,7 @@
 <body bgcolor="#FF9933">
 
   <header>
-<h1>洋楽<br>
+<h1>邦楽<br>
   <a href="<?php echo base_url().'music/japan'; ?>">邦楽</a>
   <a href="<?php echo base_url().'music/foreign'; ?>">洋楽</a>
   <a href="<?php echo base_url().'music/rock'; ?>">ロック</a>

@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+	}
+
 	public function index()
 	{
 		$this->load->view('login_view');
@@ -13,20 +19,18 @@ class Login extends CI_Controller {
 		$user_id = $this->input->post('id');
 		$password = $this->input->post('pass');
 		$name = $this->input->post('name');
-		$this->load->model('User_model', 'user');
-		$this->user->initialize($user_id);
-		if($this->user->correct_password($password))
+		$this->load->model('User_model','user');
+		$ret = $this->user->initialize($user_id,$password);
+		if($this->user->correct_password($ret))
 		{
 			$this->user->login();
 			redirect(base_url().'home/'.$user_id);
-
 		}
 	  else
 		{
-			echo 'ログインに失敗しました。';
+			$this->load->view('unlogin_view');
 		}
 
-   include "top.php";
 
 
 

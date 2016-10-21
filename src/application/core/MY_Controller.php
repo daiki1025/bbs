@@ -8,10 +8,10 @@ class MY_Controller extends CI_Controller
     parent::__construct();
   }
 
-  protected function login_check($user_id)
+  protected function login_check($user_id,$password)
   {
     $this->load->model('User_model', 'user');
-    $this->user->initialize($user_id);
+    $this->user->initialize($user_id,$password);
     if(!$this->user->is_logged_in())
     {
       redirect(base_url().'login');
