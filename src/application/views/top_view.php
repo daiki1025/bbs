@@ -8,6 +8,7 @@
 </style>
 </head>
 <body bgcolor="#FF9933">
+
   <header>
 <h1>趣味掲示板へようこそ<br>
 

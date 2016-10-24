@@ -16,10 +16,11 @@ class Home extends MY_Controller
 
   public function main($user_id)
   {
-    parent::login_check($user_id,$password);
+    @parent::login_check($user_id,$password);
     $data = ['user_id' => $user_id];
     $this->load->view('top_view', $data);
   }
+
 
 
 }
